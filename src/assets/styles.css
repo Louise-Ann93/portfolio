@@ -1,0 +1,192 @@
+/* Tailwind core first */
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Brand tokens */
+@theme {
+    --font-sans: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+    /* Primary */
+    --color-primary-50: #f3f7fb;
+    --color-primary-100: #e7eff6;
+    --color-primary-200: #cadceb;
+    --color-primary-300: #abc7df;
+    --color-primary-400: #7ea6c9;
+    --color-primary-500: #3f7498;
+    --color-primary-600: #356d7a;
+    --color-primary-700: #2e5b6d;
+    --color-primary-800: #264b59;
+    --color-primary-900: #1e3b45;
+
+    /* Secondary */
+    --color-secondary-50: #eff8f9;
+    --color-secondary-100: #d8f0f1;
+    --color-secondary-200: #b8e1e3;
+    --color-secondary-300: #8fcfd1;
+    --color-secondary-400: #66babe;
+    --color-secondary-500: #408c8f;
+    --color-secondary-600: #367678;
+    --color-secondary-700: #2f6365;
+
+    /* Tertiary */
+    --color-tertiary-50: #f6f0fa;
+    --color-tertiary-100: #ecdff3;
+    --color-tertiary-200: #d8bfe6;
+    --color-tertiary-300: #be99d3;
+    --color-tertiary-400: #a172bb;
+    --color-tertiary-500: #7d508d;
+    --color-tertiary-600: #6d457b;
+    --color-tertiary-700: #5c3a69;
+
+    /* Aliases so `bg-primary` etc work */
+    --color-primary: var(--color-primary-500);
+    --color-secondary: var(--color-secondary-500);
+    --color-tertiary: var(--color-tertiary-500);
+}
+
+/* Shared components/utilities kept out of templates */
+@layer components {
+    /* Soft card used across the site */
+    .tile {
+        @apply bg-white/80 backdrop-blur border border-black/5 rounded-2xl shadow p-4;
+    }
+
+    /* Subtle lift on hover (optional) */
+    .hover-lift {
+        @apply transition-transform duration-200;
+    }
+    .hover-lift:hover {
+        @apply -translate-y-0.5 shadow-md;
+    }
+
+    .btn {
+        @apply inline-flex items-center gap-2 px-3 py-2 rounded-xl font-semibold border transition
+        shadow-sm hover:shadow-md focus:outline-none focus-visible:ring-2
+        focus-visible:ring-primary-300 disabled:opacity-50 disabled:pointer-events-none;
+    }
+
+    .btn-row {
+        @apply flex flex-wrap gap-3 mt-4;
+    }
+
+    .btn-outline {
+        @apply border-primary-600 text-primary-700 bg-transparent hover:bg-primary-50 hover:border-primary-700;
+    }
+
+    .btn-primary {
+        @apply text-white bg-primary-600 hover:bg-primary-700;
+    }
+
+    .btn-accent {
+        @apply text-white bg-tertiary-500 hover:bg-tertiary-600;
+    }
+
+    .hover-float {
+        @apply transition-transform hover:-translate-y-0.5;
+    }
+
+    /* header link underline */
+    .nav-underline {
+        position: relative;
+        padding: .25rem .5rem;
+        text-decoration: none;
+        transition: color .2s ease;
+    }
+
+    .nav-underline::after {
+        content: "";
+        position: absolute;
+        left: .5rem;
+        right: .5rem;
+        bottom: -2px;
+        height: 2px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform .3s ease;
+    }
+
+    .nav-underline:hover::after, .nav-underline:focus-visible::after {
+        transform: scaleX(1);
+    }
+
+    /* burger (3 spans inside) */
+    .burger {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border: none;
+        background: transparent;
+        border-radius: 10px;
+        color: var(--color-primary-900);
+    }
+
+    .burger > span {
+        position: absolute;
+        width: 22px;
+        height: 2px;
+        background: currentColor;
+        transition: transform .25s, opacity .2s, top .25s;
+    }
+
+    .burger > span:nth-child(1) {
+        top: 14px
+    }
+
+    .burger > span:nth-child(2) {
+        top: 19px
+    }
+
+    .burger > span:nth-child(3) {
+        top: 24px
+    }
+
+    .burger.open > span:nth-child(1) {
+        top: 19px;
+        transform: rotate(45deg)
+    }
+
+    .burger.open > span:nth-child(2) {
+        opacity: 0
+    }
+
+    .burger.open > span:nth-child(3) {
+        top: 19px;
+        transform: rotate(-45deg)
+    }
+
+    /* slide/fade used by <transition name="slide-fade"> */
+    .slide-fade-enter-active, .slide-fade-leave-active {
+        transition: all .25s ease;
+    }
+
+    .slide-fade-enter-from, .slide-fade-leave-to {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+}
+
+/* smooth scrolling + anchor offset */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    :target {
+        scroll-margin-top: 90px;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .6s ease, transform .6s ease;
+}
