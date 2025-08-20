@@ -13,22 +13,18 @@
         <!-- Desktop nav -->
         <nav class="hidden lg:flex items-center gap-1">
           <a href="#about" class="nav-underline">About</a>
-          <a href="#achievements" class="nav-underline">Highlights</a>
           <a href="#experience" class="nav-underline">Experience</a>
-          <a href="#certifications" class="nav-underline">Certifications</a>
           <a href="#skills" class="nav-underline">Skills</a>
-          <a href="#awards" class="nav-underline">Awards</a>
           <a href="#contact" class="nav-underline">Contact</a>
         </nav>
 
         <!-- Actions (desktop) + Burger (mobile) -->
         <div class="justify-self-end flex items-center gap-2">
           <a
-              :href="cvUrl"
-              download
-              class="hidden lg:inline-flex items-center gap-2 px-3 py-2 rounded-xl font-semibold text-white bg-tertiary-500 hover:bg-tertiary-600 transition"
+              href="mailto:madebywillo@gmail.com?subject=CV%20request&body=Hi%20Louise,%0D%0A%0D%0APlease%20could%20you%20share%20your%20CV.%0D%0A%0D%0AThanks!"
+              class="btn btn-accent hover-float"
           >
-            Download CV
+            Request CV
           </a>
 
           <!-- Burger (mobile only) -->
@@ -55,9 +51,11 @@
           <a v-for="l in links" :key="l.href" :href="l.href" @click="closeMenu"
              class="px-2 py-2 rounded-lg hover:bg-primary-50 transition">{{ l.label }}</a>
 
-          <a :href="cvUrl" download
-             class="mt-2 inline-flex items-center justify-center px-3 py-2 rounded-xl font-semibold text-white bg-tertiary-500 hover:bg-tertiary-600">
-            Download CV
+          <a
+              href="mailto:madebywillo@gmail.com?subject=CV%20request&body=Hi%20Louise,%0D%0A%0D%0APlease%20could%20you%20share%20your%20CV.%0D%0A%0D%0AThanks!"
+              class="btn btn-accent hover-float"
+          >
+            Request CV
           </a>
         </nav>
       </transition>
@@ -80,7 +78,7 @@
         >
           <figure class="rounded-xl overflow-hidden ring-1 ring-black/5 bg-white/40">
             <img
-                src="../assets/selfie.png"
+                src="../../assets/selfie.png"
                 alt="Profile photo of Louise Willoughby"
                 class="block w-full h-[360px] lg:h-[420px] object-cover"
             />
@@ -268,6 +266,17 @@
     <!--      </div>-->
     <!--    </section>-->
 
+<!--    &lt;!&ndash; Awards &ndash;&gt;-->
+<!--    <section id="awards" class="mx-auto max-w-[1120px] px-5 py-16">-->
+<!--  <span class="inline-block px-2.5 py-1 rounded-full bg-primary-50 text-primary text-xs font-semibold">-->
+<!--    Nice things-->
+<!--  </span>-->
+<!--      <h2 class="text-3xl font-bold mt-2 mb-4">Awards & recognition</h2>-->
+
+<!--      &lt;!&ndash; Minimal, just items with label & content &ndash;&gt;-->
+<!--      <UAccordion :items="awardItems" multiple class="mt-4"/>-->
+<!--    </section>-->
+
     <!-- Awards -->
     <section id="awards" class="mx-auto max-w-[1120px] px-5 py-16">
   <span class="inline-block px-2.5 py-1 rounded-full bg-primary-50 text-primary text-xs font-semibold">
@@ -275,9 +284,56 @@
   </span>
       <h2 class="text-3xl font-bold mt-2 mb-4">Awards & recognition</h2>
 
-      <!-- Minimal, just items with label & content -->
-      <UAccordion :items="awardItems" multiple class="mt-4"/>
+      <!-- Pure API usage -->
+      <UAccordion :items="awardItems" multiple class="mt-4">
+        <!-- item 0 -->
+        <template #item-0>
+          <div class="grid md:grid-cols-[1fr_auto] gap-4 items-start">
+            <p class="text-sm leading-6 text-slate-700 whitespace-pre-line">
+              Recognised for driving UX strategy and cross-functional delivery
+              across 35+ brands with measurable improvements to adoption and retention.
+            </p>
+            <img
+                v-if="awardImages.dwa"
+                :src="awardImages.dwa"
+                alt="Digital Women Awards"
+                class="w-40 h-28 object-cover rounded-xl ring-1 ring-black/5"
+                loading="lazy"
+                decoding="async"
+            />
+          </div>
+        </template>
+
+        <!-- item 1 -->
+        <template #item-1>
+          <p class="text-sm leading-6 text-slate-700">
+            Finalist for leadership impact, product culture, and delivery excellence.
+          </p>
+        </template>
+
+        <!-- item 2 -->
+        <template #item-2>
+          <p class="text-sm leading-6 text-slate-700">
+            Named two years running for contribution to product and UX leadership.
+          </p>
+        </template>
+
+        <!-- item 3 -->
+        <template #item-3>
+          <p class="text-sm leading-6 text-slate-700">
+            Nominated for achievements in product strategy and cross-functional delivery.
+          </p>
+        </template>
+
+        <!-- item 4 -->
+        <template #item-4>
+          <p class="text-sm leading-6 text-slate-700">
+            Recognised for technical writing and community contribution.
+          </p>
+        </template>
+      </UAccordion>
     </section>
+
 
 
     <!-- Contact -->
@@ -295,9 +351,19 @@
              href="mailto:louiseawilloughby@outlook.com">Email me</a>
           <a class="inline-flex items-center gap-2 px-3 py-2 rounded-xl font-semibold border border-primary-600 text-primary-700 hover:bg-primary-50"
              href="https://www.linkedin.com/in/louiseawilloughby/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a :href="cvUrl" download
-             class="inline-flex items-center gap-2 px-3 py-2 rounded-xl font-semibold text-white bg-tertiary-500 hover:bg-tertiary-600">Download
-            CV</a>
+          <a
+              href="mailto:madebywillo@gmail.com?subject=CV%20request&body=Hi%20Louise,%0D%0A%0D%0APlease%20could%20you%20share%20your%20CV.%0D%0A%0D%0AThanks!"
+              class="btn btn-accent hover-float"
+          >
+            Request CV
+          </a>
+          <button
+              class="btn btn-outline hover-float"
+              @click="navigator.clipboard.writeText(email)"
+              title="Copy email to clipboard"
+          >
+            Copy email
+          </button>
         </div>
       </div>
     </section>
