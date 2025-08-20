@@ -55,6 +55,7 @@
     .hover-lift {
         @apply transition-transform duration-200;
     }
+
     .hover-lift:hover {
         @apply -translate-y-0.5 shadow-md;
     }
@@ -181,11 +182,16 @@
 }
 
 .reveal {
+    opacity: 1;
+    transform: none;
+}
+
+.js .reveal {
     opacity: 0;
     transform: translateY(8px);
 }
 
-.reveal.in {
+.js .reveal.in {
     opacity: 1;
     transform: translateY(0);
     transition: opacity .6s ease, transform .6s ease;
