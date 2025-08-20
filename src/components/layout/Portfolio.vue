@@ -21,14 +21,14 @@
     <!-- Highlights -->
     <highlights/>
 
+    <!-- Skills -->
+    <skills/>
+
     <!-- Experience -->
     <experience/>
 
-    <!-- Certifications -->
-    <certificates/>
-
-    <!-- Skills -->
-    <skills/>
+<!--    &lt;!&ndash; Certifications &ndash;&gt;-->
+<!--    <certificates/>-->
 
     <!-- Awards -->
     <Awards/>

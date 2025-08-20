@@ -21,11 +21,11 @@ const highlights = [
 </script>
 
 <template>
-  <section id="achievements" class="mx-auto max-w-[1120px] px-5 py-16">
+  <section id="achievements" class="mx-auto max-w-[1120px] px-5 py-16 border-t border-b border-black/5 py-24">
       <span
-          class="inline-block px-2.5 py-1 rounded-full bg-primary-50 text-primary text-xs font-semibold">Highlights</span>
+          class="mx-auto inline-block px-2.5 py-2 rounded-full bg-primary/40 text-slate text-xs font-semibold">HIGHLIGHTS</span>
     <h2 class="text-3xl font-bold mt-2 mb-4">Career highlights</h2>
-    <div class="grid md:grid-cols-2 gap-5">
+    <div class="flex flex-col lg:flex-row gap-5">
       <article v-for="(h, i) in highlights" :key="i"
                data-animate
                class="reveal transition duration-700 bg-white/90 border border-black/5 rounded-2xl shadow p-4">

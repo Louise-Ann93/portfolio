@@ -1,5 +1,7 @@
 <script setup>
 import selfieUrl from "@/assets/img/snow-selfie.png";
+import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
+
 </script>
 
 <template>
@@ -9,7 +11,7 @@ import selfieUrl from "@/assets/img/snow-selfie.png";
         class="max-w-[1120px] mx-auto transition reveal px-5 grid md:grid-cols-[.9fr_1.1fr] gap-5 items-center">
       <div class="pl-4">
       <span
-          class="mx-auto inline-block px-2.5 py-2 rounded-full bg-primary/70 text-white text-xs font-semibold">About Me</span>
+          class="mx-auto inline-block px-2.5 py-2 rounded-full bg-primary/40 text-slate text-xs font-semibold">ABOUT ME</span>
         <h2 class="text-3xl font-bold my-4">Personal statement</h2>
         <p data-animate
            class="text-[15px] leading-7 text-slate-800 ">
@@ -31,14 +33,11 @@ import selfieUrl from "@/assets/img/snow-selfie.png";
       </div>
 
       <aside data-animate
-             class="mx-auto reveal transition bg-white/80 border border-black/5 shadow-md backdrop-blur p-5 w-[400px]"
+             class="mx-auto reveal transition photo-stack mt-12 lg:mt-0"
       >
-        <figure class="overflow-hidden ring-1 ring-black/5 bg-white/40">
-          <img
-              :src="selfieUrl"
-              alt="Snow photo of Louise Willoughby"
-              class="block w-full h-[420px] lg:h-[520px] object-cover"
-          />
+        <figure class="ml-auto">
+          <div class="photo-stack-bg"></div>
+          <img :src="selfieUrl" alt="snow selfie" class="photo-stack-img"/>
         </figure>
       </aside>
 

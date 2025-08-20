@@ -1,90 +1,102 @@
+<template>
+  <!-- Certifications -->
+  <section id="certifications" class="border-t border-b border-black/5 bg-secondary-500/45 backdrop-blur-md py-24">
+    <div class="mx-auto max-w-[1120px] px-5">
+    <span
+        class="ml-5 inline-block px-2.5 py-2 rounded-full bg-white/40 text-slate text-xs font-semibold">CREDENTIALS</span>
+      <h2 class="ml-5 text-3xl font-bold mt-2 mb-4">Certifications</h2>
+
+      <div class="ml-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article
+            v-for="(c, i) in certs"
+            :key="i"
+            class="bg-white/90 border border-black/5 rounded-2xl shadow-sm hover:shadow-md transition p-4 flex flex-col"
+        >
+          <!-- Top row: logo + meta -->
+          <div class="flex items-start gap-3">
+            <div
+                class="w-16 h-16 rounded-xl ring-1 ring-primary-100 bg-primary-50/60 grid place-items-center overflow-hidden shrink-0">
+              <img
+                  v-if="c.img"
+                  :src="c.img"
+                  :alt="(c.issuer || c.name) + ' logo'"
+                  class="max-w-[56px] max-h-[56px] object-contain"
+                  loading="lazy"
+                  decoding="async"
+              />
+              <span v-else class="text-primary-700 font-semibold text-sm">{{ initials(c.issuer || c.name) }}</span>
+            </div>
+
+            <div class="min-w-0">
+              <h3 class="text-lg font-semibold leading-snug">{{ c.name }}</h3>
+              <p class="text-sm text-slate-600">
+                {{ c.issuer }}
+                <span v-if="c.date"> • {{ c.date }}</span>
+              </p>
+              <p v-if="c.id" class="text-xs text-slate-500 mt-0.5">ID: {{ c.id }}</p>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="mt-4 pt-2 border-t border-black/5">
+            <a
+                v-if="c.url"
+                :href="c.url"
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl font-semibold text-primary-700 border border-primary-600 hover:bg-primary-50 text-sm"
+            >
+              View credential
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4" fill="none" viewBox="0 0 24 24"
+                   stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h4m0 0v4m0-4L10 14"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</template>
+
 <script setup>
-import cspoLogo from "@/assets/img/cspo.png";
+import cspoLogo from '../../assets/img/cspo.png' // example
+
+const initials = (s = '') =>
+    s.split(/\s+/).map(w => w[0]).filter(Boolean).slice(0, 2).join('').toUpperCase()
 
 const certs = [
   {
     img: cspoLogo,
     name: 'CSPO® – Certified Scrum Product Owner',
     issuer: 'Scrum Alliance',
-    year: 'April 2024',
-    url: 'https://verify.example.com/your-cspo', // optional
-    id: 'ABC-12345' // optional
+    date: 'April 2024',
+    id: 'ABC-12345',
+    url: 'https://verify.example.com/cspo'
   },
-
   {
     name: 'UX Deepdive: UX Mapping',
     issuer: 'LinkedIn Learning',
-    year: 'July 2025',
-    url: 'https://verify.example.com/your-cspo', // optional
+    date: 'July 2025',
+    url: 'https://www.linkedin.com/learning/'
   },
-
   {
     name: 'HTML Foundations',
     issuer: 'Zenva',
-    year: 'Oct 2021',
-    url: 'https://verify.example.com/your-cspo', // optional
+    date: 'Oct 2021',
+    url: 'https://zenva.com/'
   },
-
   {
     name: 'HubSpot Sales Software Certified',
     issuer: 'HubSpot Academy',
-    year: 'April 2020',
-    url: 'https://verify.example.com/your-cspo', // optional
+    date: 'April 2020',
+    url: 'https://academy.hubspot.com/'
   },
-
   {
     name: 'HubSpot Certified',
     issuer: 'HubSpot Academy',
-    year: 'March 2020',
-    url: 'https://verify.example.com/your-cspo', // optional
-  },
+    date: 'March 2020',
+    url: 'https://academy.hubspot.com/'
+  }
 ]
-const initials = (s = '') =>
-    s.split(/\s+/).map(w => w[0]).filter(Boolean).slice(0, 2).join('').toUpperCase()
 </script>
-
-<template>
-  <section id="certifications" class="mx-auto max-w-[1120px] px-5 py-16" data-animate="fade-up">
-    <div class="inline-block px-2.5 py-1 rounded-full bg-primary-50 text-primary text-xs font-semibold">Credentials
-    </div>
-    <h2 class="text-3xl font-bold mt-2 mb-4">Certifications</h2>
-
-    <div class="grid md:grid-cols-3 gap-5">
-      <article v-for="(c, i) in certs" :key="i"
-               class="reveal transition duration-700 bg-white/90 border border-black/5 rounded-2xl shadow p-4"
-               data-animate="fade-in">
-        <div class="flex items-center gap-3">
-          <div
-              class="rounded-xl bg-primary-50/60 ring-1 ring-primary-100 grid place-items-center overflow-hidden">
-            <img
-                v-if="c.img"
-                :src="c.img"
-                :alt="(c.issuer || c.name) + ' logo'"
-                class="object-contain"
-                loading="lazy"
-                decoding="async"
-                style="width: 100px"
-            />
-            <span v-else class="text-primary-700 font-semibold text-xs">
-            {{ initials(c.issuer || c.name) }}
-              </span>
-          </div>
-
-          <div>
-            <h3 class="text-lg font-semibold">{{ c.name }}</h3>
-            <p class="text-sm mt-1 text-slate-700">{{ c.issuer }} • {{ c.year }}</p>
-            <span v-if="c.id" class="text-sm mt-1 text-slate-700">ID: {{ c.id }}</span>
-          </div>
-
-        </div>
-
-        <div class="btn-row flex justify-center" v-if="c.url">
-          <a v-if="c.url" :href="c.url" target="_blank" rel="noreferrer" class="btn btn-outline">
-            View credential
-          </a>
-        </div>
-
-      </article>
-    </div>
-  </section>
-</template>
