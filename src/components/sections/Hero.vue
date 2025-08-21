@@ -15,6 +15,7 @@
                 src="https://mlyidxcoltsz.i.optimole.com/w:auto/h:auto/q:auto/id:4ac6d09876cd41d6720058a826e1cd7b/directUpload/selfie.png"
                 alt="Profile photo of Louise Willoughby"
                 class="block w-[320px] lg:w-full lg:h-[450px] object-cover"
+                fetchpriority="high"
             />
           </figure>
 
