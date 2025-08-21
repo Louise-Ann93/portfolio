@@ -72,7 +72,7 @@ const awardItems = [
         </article>
       </div>
 
-      <UAccordion :items="awardItems" multiple class="ml-5 mt-4">
+      <UAccordion :items="awardItems" multiple class="px-5 mt-4">
         <!-- item 0 -->
         <template #item-0>
           <div class="grid md:grid-cols-[1fr_auto] gap-4 items-start">

@@ -73,8 +73,7 @@ function showCopied() {
     <div class="border-t border-black/5 p-4">
       <div class="text-sm flex items-center justify-between">
         <p>© {{ new Date().getFullYear() }} Louise Willoughby. All rights reserved.</p>
-        <a href="#top" class="sticky bottom-4 p-3 bg-primary rounded-full text-white opacity-80 hover:opacity-100">Back
-          to top ↑</a>
+        <a href="#top" class="w-18 p-3 bg-primary rounded-full text-white opacity-80 hover:opacity-100">Top ↑</a>
       </div>
     </div>
 
