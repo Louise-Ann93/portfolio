@@ -1,6 +1,4 @@
 <script setup>
-import selfieUrl from '@/assets/img/selfie.png'
-import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
 
 </script>
 
@@ -14,7 +12,7 @@ import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
         <div class="relative">
           <figure class="rounded-xl overflow-hidden ring-1 ring-black/5 bg-white/40">
             <img
-                :src="selfieUrl"
+                src="https://mlyidxcoltsz.i.optimole.com/w:auto/h:auto/q:auto/id:4ac6d09876cd41d6720058a826e1cd7b/directUpload/selfie.png"
                 alt="Profile photo of Louise Willoughby"
                 class="block w-[320px] lg:w-full lg:h-[450px] object-cover"
             />
@@ -23,13 +21,13 @@ import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
           <!-- CSPO “stamp” -->
           <a
               href="https://bcert.me/bc/html/show-badge.html?b=zdxfzsbn"
-              target="_blank" rel="noreferrer"
+              target="_blank"
               class="group absolute -bottom-4 -right-4 md:-bottom-12 md:-right-12 rotate-[-8deg] hover:rotate-0 transition"
               aria-label="View CSPO® credential"
           >
             <div
                 class="grid place-items-center w-24 h-24 md:w-38 md:h-38 rounded-full shadow-lg ring-1 ring-black/10">
-              <img :src="cspoLogo" alt="" class="w-24 h-24 md:h-36 md:w-36"/>
+              <img src="https://mlyidxcoltsz.i.optimole.com/w:auto/h:auto/q:auto/id:8a776ec7ab5bbdd61f3b4ce2e356a393/directUpload/cspo.png" alt="cspo cert" class="w-24 h-24 md:h-36 md:w-36"/>
             </div>
           </a>
         </div>
@@ -60,37 +58,7 @@ import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
           <img src="../../assets/img/location-pin-thin.svg" alt="location icon" width="25">
           <span class="text-md leading-7 text-slate-700">Suffolk, UK</span>
         </div>
-
-<!--        <div class="mt-5">-->
-<!--          <details class="inline-block group">-->
-<!--            <summary-->
-<!--                class="list-none inline-flex items-center gap-2 rounded-full bg-primary-600/10 text-primary-700 ring-1 ring-primary/20 px-3 py-1 cursor-pointer"-->
-<!--            >-->
-<!--              <img :src="cspoLogo" alt="" class="h-4 w-4"/>-->
-<!--              <span class="font-semibold">CSPO® certified</span>-->
-<!--              <svg viewBox="0 0 20 20" fill="currentColor"-->
-<!--                   class="size-4 transition group-open:rotate-180">-->
-<!--                <path fill-rule="evenodd"-->
-<!--                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 111.08 1.04l-4.24 4.39a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"-->
-<!--                      clip-rule="evenodd"/>-->
-<!--              </svg>-->
-<!--            </summary>-->
-
-<!--            <div class="mt-2 p-3 rounded-xl bg-white/95 border border-black/5 shadow text-sm max-w-sm">-->
-<!--              <p class="text-slate-700">-->
-<!--                <strong>Certified Scrum Product Owner®</strong><br>-->
-<!--                Scrum Alliance • Issued Apr 2024-->
-<!--              </p>-->
-<!--              <a href="https://example.com/your-cspo-verify" target="_blank" rel="noreferrer"-->
-<!--                 class="mt-2 inline-flex items-center gap-1 font-semibold text-primary hover:underline">-->
-<!--                Verify credential <span aria-hidden>↗</span>-->
-<!--              </a>-->
-<!--            </div>-->
-<!--          </details>-->
-<!--        </div>-->
-
       </div>
-
     </div>
   </section>
 </template>

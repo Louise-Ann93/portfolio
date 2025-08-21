@@ -79,7 +79,7 @@ const awardItems = [
             <img
                 v-if="awardImages.dwa"
                 :src="awardImages.dwa"
-                alt="Digital Women Awards"
+                alt="Awards"
                 class="w-40 h-28 object-cover rounded-xl ring-1 ring-black/5"
                 loading="lazy"
                 decoding="async"

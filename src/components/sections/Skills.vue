@@ -30,7 +30,7 @@ const capabilities = [
   {
     title: 'Product Lifecycle',
     points: [
-      'Hands-on across every stage, from discovery to delivery., synthesis',
+      'Hands-on across every stage, from discovery to delivery.',
     ],
     tags: ['Research & testing', 'Delivery & adoption', 'Retention optimisation']
   },
@@ -69,8 +69,8 @@ const capabilities = [
                   :src="tool.img"
                   :alt="tool.name"
                   class="max-h-14 object-contain"
-                  loading="lazy"
                   decoding="async"
+                  loading="lazy"
               />
             </div>
           </a>
@@ -107,51 +107,4 @@ const capabilities = [
       </div>
     </div>
   </section>
-
-  <!--  <section id="skills" class="px-5 py-16 bg-secondary-500/45">-->
-  <!--    <div class="mx-auto max-w-[1120px]">-->
-  <!--    <span-->
-  <!--        class="inline-block px-2.5 py-1 rounded-full bg-primary-50 ml-5 text-primary text-xs font-semibold">-->
-  <!--      Toolkit-->
-  <!--    </span>-->
-  <!--      <h2 class="text-3xl font-bold mt-2 ml-5 mb-4">Skills</h2>-->
-  <!--    </div>-->
-  <!--    <div class="reveal transition mx-auto max-w-[1120px] grid grid-cols-1 md:grid-cols-2">-->
-  <!--      <div>-->
-  <!--        <div class="m-[30px] grid grid-cols-3 lg:grid-cols-5 gap-3 ml-5">-->
-  <!--          <div-->
-  <!--              v-for="(logo, l) in logoSkills"-->
-  <!--              :key="l"-->
-  <!--              class="flex flex-col items-center gap-2"-->
-  <!--          >-->
-  <!--            <a :href="logo.url" target="_blank" class="block">-->
-  <!--              &lt;!&ndash; uniform square canvas for every logo &ndash;&gt;-->
-  <!--              <div-->
-  <!--                  class="aspect-square size-20 grid place-items-center rounded-xl bg-white/70 ring-1 ring-black/5 px-2">-->
-  <!--                <img-->
-  <!--                    :src="logo.img"-->
-  <!--                    :alt="logo.name"-->
-  <!--                    loading="lazy"-->
-  <!--                    decoding="async"-->
-  <!--                    class="block max-h-12 md:max-h-14 w-auto object-contain"-->
-  <!--                />-->
-  <!--              </div>-->
-  <!--            </a>-->
-  <!--            <p class="text-center text-base md:text-lg leading-tight min-h-[1.75rem]">-->
-  <!--              {{ logo.name }}-->
-  <!--            </p>-->
-  <!--          </div>-->
-  <!--        </div>-->
-
-  <!--      </div>-->
-  <!--      <div class="flex flex-col">-->
-  <!--        <div v-for="(s, i) in skills" :key="i"-->
-  <!--             data-animate-->
-  <!--             class="bg-white/90 border border-black/5 rounded-2xl shadow p-4 mt-4">-->
-  <!--          <h3 class="text-lg font-semibold">{{ s.title }}</h3>-->
-  <!--          <p class="text-sm mt-1 text-slate-700">{{ s.text }}</p>-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </section>-->
 </template>

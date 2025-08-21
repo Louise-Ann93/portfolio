@@ -19,7 +19,7 @@ const links = [
     <div class="mx-auto max-w-[1120px] px-5 h-16 md:h-18 grid grid-cols-[1fr_auto_auto] items-center gap-4">
       <!-- Brand -->
       <a href="#top">
-            <img src="../../assets/img/LW.png" width="75" alt="LW Logo">
+            <img rel="preload" src="https://mlyidxcoltsz.i.optimole.com/w:auto/h:auto/q:auto/id:54e4ea818abc46ea2d265ae44b005d06/directUpload/LW-Logo.png" width="75" alt="LW Logo">
       </a>
 
       <!-- Desktop nav -->

@@ -35,7 +35,7 @@ import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
       >
         <figure class="ml-auto">
           <div class="photo-stack-bg"></div>
-          <img :src="selfieUrl" alt="snow selfie" class="photo-stack-img"/>
+          <img src="https://mlyidxcoltsz.i.optimole.com/w:auto/h:auto/q:auto/id:09154363a6a54a843a056af0caf37dcd/directUpload/snow.png" alt="snow selfie" class="photo-stack-img"/>
         </figure>
       </aside>
 
