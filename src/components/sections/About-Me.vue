@@ -1,6 +1,4 @@
 <script setup>
-import selfieUrl from "@/assets/img/snow-selfie.png";
-import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
 
 </script>
 

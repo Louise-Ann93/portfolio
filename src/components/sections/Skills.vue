@@ -78,7 +78,7 @@ const capabilities = [
         </li>
       </ul>
 
-      <!-- Block 2: Capabilities -->
+      <!-- Capabilities -->
       <div class="mt-10 grid md:grid-cols-3 gap-5 ml-5">
         <article
             v-for="cap in capabilities"
@@ -93,7 +93,6 @@ const capabilities = [
             </li>
           </ul>
 
-          <!-- Optional chips for soft skills -->
           <div v-if="cap.tags?.length" class="mt-3 flex flex-wrap gap-2">
           <span
               v-for="t in cap.tags"
