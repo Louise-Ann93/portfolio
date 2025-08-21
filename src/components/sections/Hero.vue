@@ -5,11 +5,11 @@ import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
 </script>
 
 <template>
-  <section class="mx-auto max-w-[1120px] px-5 pt-16 pb-24 border-b border-black/5">
+  <section class="mx-auto max-w-[1120px] px-5 pt-16 pb-24 border-b border-black/5 reveal transition">
     <div class="grid md:grid-cols-[.9fr_1.1fr] gap-12 items-center">
 
       <aside data-animate
-             class="reveal transition bg-white/80 border border-black/5 rounded-2xl shadow-md backdrop-blur p-5 w-[320px] lg:w-full mx-auto"
+             class="bg-white/80 border border-black/5 rounded-2xl shadow-md backdrop-blur p-5 w-[320px] lg:w-full mx-auto"
       >
         <div class="relative">
           <figure class="rounded-xl overflow-hidden ring-1 ring-black/5 bg-white/40">

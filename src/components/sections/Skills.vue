@@ -23,27 +23,21 @@ const capabilities = [
   {
     title: 'Product Strategy & Ownership',
     points: [
-      'Roadmaps, prioritisation & stakeholder alignment',
-      'Problem framing, opportunity sizing, business cases',
-      'Outcome-oriented planning & KPI design',
-      'Mentoring PMs & engineers; hiring & growth'
-    ]
+      'Shaping direction and aligning teams to deliver impact.',
+    ],
+    tags: ['Roadmaps', 'Prioritisation', 'Stakeholder alignment']
   },
   {
     title: 'Product Lifecycle',
     points: [
-      'Discovery → delivery: research, experiment design, synthesis',
-      'Backlog health, UX writing & acceptance criteria',
-      'Cross-functional rituals, visibility & reporting',
-      'Adoption, retention & funnel optimisation'
-    ]
+      'Hands-on across every stage, from discovery to delivery., synthesis',
+    ],
+    tags: ['Research & testing', 'Delivery & adoption', 'Retention optimisation']
   },
   {
     title: 'Soft skills',
     points: [
-      'Empathetic, commercially minded, calm under pressure',
-      'Clear communicator; crisp writing & facilitation',
-      'Coach & culture-builder; feedback that sticks'
+      'Empathetic leader who builds clarity and strong team culture.',
     ],
     tags: ['Leadership', 'Communication', 'Coaching']
   }

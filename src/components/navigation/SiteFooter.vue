@@ -13,22 +13,16 @@
       </div>
       <div class="flex flex-wrap gap-3 pt-8">
         <a class="inline-flex items-center gap-2 px-3 py-2 rounded-xl font-semibold text-white bg-primary-600 hover:bg-primary-700"
-           href="mailto:louiseawilloughby@outlook.com">Email me</a>
+           href="mailto:madebywillo@gmail.com">Email me</a>
         <a class="inline-flex items-center gap-2 px-3 py-2 rounded-xl font-semibold border border-primary-600 text-primary-700 hover:bg-primary-200"
            href="https://www.linkedin.com/in/louiseawilloughby/" target="_blank" rel="noreferrer">LinkedIn</a>
-<!--        <a-->
-<!--            href="mailto:madebywillo@gmail.com?subject=CV%20request&body=Hi%20Louise,%0D%0A%0D%0APlease%20could%20you%20share%20your%20CV.%0D%0A%0D%0AThanks!"-->
-<!--            class="btn btn-accent hover-float"-->
-<!--        >-->
-<!--          Request CV-->
-<!--        </a>-->
-<!--        <button-->
-<!--            class="btn btn-outline hover-float"-->
-<!--            @click="navigator.clipboard.writeText(email)"-->
-<!--            title="Copy email to clipboard"-->
-<!--        >-->
-<!--          Copy email-->
-<!--        </button>-->
+        <button
+            class="btn btn-outline hover-float"
+            @click="navigator.clipboard.writeText(email)"
+            title="Copy email to clipboard"
+        >
+          Copy email
+        </button>
       </div>
     </section>
 

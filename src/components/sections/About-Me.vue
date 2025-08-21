@@ -15,20 +15,18 @@ import cspoLogo from '@/assets/img/cspo.png' // adjust path if needed
         <h2 class="text-3xl font-bold my-4">Personal statement</h2>
         <p data-animate
            class="text-[15px] leading-7 text-slate-800 ">
-          Hi, I’m Lou — a product-focused leader with a hands-on journey that’s taken me from sales and support, through
+          Hi, I’m Lou — a product focused leader with a hands-on journey that’s taken me from sales and support, through
           data and front-end, to shaping product and UX strategy at a global scale.
           <br><br>
-          I understand products end-to-end: the people using them, the teams building them, and the systems that hold
+          I understand products end-to-end - The people using them, the teams building them and the systems that hold
           everything together. That perspective is what I bring into every decision.
           <br><br>
-          What drives me is simple: people, progress, and purpose. Over the years I’ve built high-performing teams,
-          turned
-          underperformance around, and created feedback cultures where ideas (and people) can grow. I thrive in
-          fast-moving, collaborative environments where clarity, focus, and outcomes really matter.
+          What drives me is simple - people, progress and purpose. Over the years I’ve built high performing teams,
+          turned under-performance around and created feedback cultures where ideas (and people) can grow. I thrive in
+          fast-moving, collaborative environments where clarity, focus and outcomes really matter.
           <br><br>
-          Outside of work, you’ll usually find me hiking, tinkering with side projects, building LEGO, or keeping up
-          with
-          two cats and a tortoise.
+          Outside of work, you’ll usually find me hiking, tinkering with side projects, building LEGO or keeping up
+          with two cats and a tortoise.
         </p>
       </div>
 

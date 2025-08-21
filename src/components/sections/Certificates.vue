@@ -1,7 +1,7 @@
 <template>
   <!-- Certifications -->
   <section id="certifications" class="border-t border-b border-black/5 bg-secondary-500/45 backdrop-blur-md py-24">
-    <div class="mx-auto max-w-[1120px] px-5">
+    <div class="reveal transition mx-auto max-w-[1120px] px-5">
     <span
         class="ml-5 inline-block px-2.5 py-2 rounded-full bg-white/40 text-slate text-xs font-semibold">CREDENTIALS</span>
       <h2 class="ml-5 text-3xl font-bold mt-2 mb-4">Certifications</h2>
