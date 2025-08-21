@@ -1,17 +1,7 @@
 /*
-  Content-Security-Policy:
-    default-src 'self';
-    script-src 'self';
-    style-src 'self' https://fonts.googleapis.com;
-    img-src 'self' data: blob: https://*.optimole.com https://*.i.optimole.com;
-    font-src 'self' https://fonts.gstatic.com;
-    connect-src 'self' https://*.optimole.com;
-    frame-ancestors 'none';
-    base-uri 'self';
-    form-action 'self';
-    upgrade-insecure-requests; block-all-mixed-content
-  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; img-src 'self' data: blob: https://*.i.optimole.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content
   X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   Permissions-Policy: geolocation=(), camera=(), microphone=()
